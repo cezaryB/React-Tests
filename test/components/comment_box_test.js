@@ -20,7 +20,7 @@ describe('Comment Box', () => {
   it('has a button', () => {
     expect(component.find('button')).to.exist
   })
-  
+
   describe('entering some text', () => {
 
     beforeEach(() => {
@@ -32,7 +32,8 @@ describe('Comment Box', () => {
     })
 
     it('when submitted, clears the input', () => {
-
+      component.simulate('submit')
+      expect(component.find('textarea')).to.have.value('')
     })
   })
 })
