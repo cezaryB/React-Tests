@@ -6,8 +6,8 @@ class CommentList extends Component {
     console.log(nextProps)
   }
   renderCommentList() {
-    if (this.props.comments.comments.length > 0) {
-      return this.props.comments.comments.map((comment,index) => {
+    if (this.props.comments.length > 0) {
+      return this.props.comments.map((comment,index) => {
         return <li key={index}>{comment}</li>
       })
     }
